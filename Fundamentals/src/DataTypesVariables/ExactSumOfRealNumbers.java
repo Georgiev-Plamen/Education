@@ -1,5 +1,6 @@
-package DataTypesVariables;
+package LabDataAndVariables;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class ExactSumOfRealNumbers {
@@ -7,14 +8,17 @@ public class ExactSumOfRealNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        double result = 0;
-        int num = Integer.parseInt(scanner.nextLine());
+        int count = Integer.parseInt(scanner.nextLine());
+        BigDecimal bigDicResult = new BigDecimal(0);
 
-        for (int i = 0; i < num ; i++) {
-            double input = Double.parseDouble(scanner.nextLine());
-            result += input;
+        for (int i = 0; i < count; i++) {
+
+            BigDecimal big = new BigDecimal(scanner.next());
+            bigDicResult = bigDicResult.add(big);
+
         }
 
-        System.out.printf("%f", result);
+        System.out.println(bigDicResult);
     }
+
 }
